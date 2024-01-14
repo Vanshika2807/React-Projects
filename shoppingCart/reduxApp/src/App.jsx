@@ -6,7 +6,7 @@ import { Routes,Route } from "react-router-dom";
 const App = () => {
   return(
     <div>
-      <div>
+      <div className="bg-slate-900">
         <Navbar/>
       </div>
       <Routes>

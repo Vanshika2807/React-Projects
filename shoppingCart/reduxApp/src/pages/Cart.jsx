@@ -14,6 +14,7 @@ const Cart = () => {
     setTotalAmount(cart.reduce((acc,curr) => acc + curr.price,0));
     //here reduce function is used having accumulator and current value
     // acc has been initialised with 0
+    //in dependency cart is passed as we want it to calculate totalAmount only when cart component rendered
   }, [cart])
 
   return(
@@ -51,10 +52,10 @@ const Cart = () => {
 
 
         </div>) : 
-        (<div>
-          <h1>Cart Empty</h1>
+        (<div className="flex flex-col justify-center items-center text-center mx-auto gap-3 text-[20px] mt-20">
+          <h1>Cart is Empty</h1>
           <Link to="/">
-            <button>
+            <button className="text-white bg-green-600  border-gray-700 rounded-full font-semibold text-[20px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
               Shop Now
             </button>
           </Link>
